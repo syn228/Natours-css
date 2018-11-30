@@ -55,7 +55,10 @@ body {
 
 .heading-primary {
   color: #fff;
-  text-transform: uppercase
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+
 }
 
 .heading-primary-main {
@@ -66,6 +69,7 @@ body {
 
   animation-name: moveInFromLeft;
   animation-duration: 1s;
+  animation-timing-function: ease-out
 }
 
 .heading-primary-sub {
@@ -76,12 +80,17 @@ body {
 
   animation-name: moveInFromRight;
   animation-duration: 1s;
+  animation-timing-function: ease-out
 }
 
 @keyframes moveInFromLeft {
   0% {
     opacity: 0;
     transform: translateX(-100px)
+  }
+
+  80% {
+    transform: translateX(10px)
   }
 
   100% {
@@ -94,6 +103,10 @@ body {
   0% {
     opacity: 0;
     transform: translateX(100px)
+  }
+
+  80% {
+    transform: translateX(-10px)
   }
 
   100% {
