@@ -48,7 +48,11 @@
 
   &__radio-group {
     width: 50%;
-    display: inline-block;
+    float: left;
+  }
+
+  &__radio-input {
+    display: none;
   }
 
   &__radio-label {
@@ -80,7 +84,12 @@
       transform: translate(-50%, -50%);
       background-color: $color-primary;
       opacity: 0;
-
+      transition: opacity .2s;
     }
+  }
+
+  &__radio-input:checked + &__radio-label &__radio-button::after {
+    opacity: 1;
+
   }
 }
