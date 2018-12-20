@@ -23,6 +23,8 @@
     right: 6.5rem;
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     z-index: 1000;
+
+    // transform: scale(80);
   }
 
   &__nav {
@@ -35,14 +37,26 @@
   }
 
   &__list {
-
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
   }
 
   &__item {
-
+    margin: 1rem;
   }
 
   &__link {
-
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1rem 2rem;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-image: linear-gradient(120deg, transparent);
+    background-size: 100%;
   }
 }
