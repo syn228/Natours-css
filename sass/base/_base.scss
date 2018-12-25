@@ -10,20 +10,16 @@ html {
   // 62.5%: 1 rem would be equivalent to 10px when compiled
   font-size: 62.5%;
 
-  @include respond(phone) {
-    font-size: 50%;
-  }
-
   @include respond(tab-port) {
-    font-size: 60%;
+    font-size: 50%; //1rem = 8px
   }
 
   @include respond(tab-land) {
-    font-size: 70%;
+    font-size: 56.25%; // 1rem = 9px
   }
 
   @include respond(big-desktop) {
-    font-size: 80%;
+    font-size: 75%; // 1rem = 12px
   }
 }
 
