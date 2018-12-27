@@ -37,7 +37,6 @@ body {
 
     @include respond(phone){
       letter-spacing: .5rem;
-      font-size: 5rem;
     }
   }
 }
