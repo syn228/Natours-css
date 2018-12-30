@@ -23,12 +23,24 @@
     transform: translate(-50%, -50%) scale(.25);
     transition: all .5s .2s;
 
+    @include respond(tab-port){
+      width: 90%;
+    }
+
+    @include respond(phone){
+      width: 100%;
+    }
+
   }
 
   &__left {
     width: 33.33333333%;
     display: table-cell;
     vertical-align: middle;
+
+    @include respond(tab-port){
+      width: 20%;
+    }
   }
 
   &__right {
@@ -36,6 +48,11 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+
+    @include respond(tab-port){
+      width: 80%;
+    }
   }
 
   &__img {
@@ -60,6 +77,10 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respond(tab-port){
+      margin-bottom: 2rem;
+    }
   }
 
   &:target {
