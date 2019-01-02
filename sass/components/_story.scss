@@ -32,6 +32,10 @@
 
     @include respond(phone){
       transform: translateX(-3rem) skewX(0);
+      -webkit-shape-outside: circle(35% at 35% 35%);
+      shape-outside: circle(35% at 35% 35%);
+      -webkit-clip-path: circle(35% at 35% 35%);
+      clip-path: circle(35% at 35% 35%);
     }
   }
 
@@ -40,6 +44,10 @@
     transform: translateX(-4rem) scale(1.4);
     backface-visibility: hidden;
     transition: all .5s;
+
+    @include respond(phone){
+      transform: translateX(-5rem) scale(1.4);
+    }
   }
 
   &__text {
