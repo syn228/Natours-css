@@ -151,7 +151,10 @@
 
 
   // MEDIA QUERY
-  @include respond(tab-port){
+  // Originally used the @include mix-in but commented in order to declare more conditions for the media query
+  // @include respond(tab-port){
+  @media only screen and (max-width: 56.25em), 
+         only screen and (hover: none) {
     height: auto;
     border-radius: 3px;
     background-color: $color-white;
